@@ -1,21 +1,20 @@
 import React from "react";
+import CartWidget from "../CartWidget";
 import './styles.css';
 
 const NavBar = () => {
     return (
       <ul>
         <li>
-          <a href="#home">Home</a>
+          <a href="#home">Inicio</a>
         </li>
         <li>
-          <a href="#news">News</a>
+          <a href="#news">Coleccion</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">Contacto</a>
         </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
+        <CartWidget/>
       </ul>
     );
 }
