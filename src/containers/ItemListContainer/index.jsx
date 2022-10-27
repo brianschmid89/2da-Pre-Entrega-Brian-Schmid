@@ -1,10 +1,38 @@
-import React from "react";
+import React , {useEffect, useState} from "react";
 import './styles.css';
+import rawProducts from "../data/products";
+import ItemList from "../../components/ItemList";
+
 
 export default function ItemListContainer ({greeting}) {
-        return (
-            <div className="item-list-container">
+    
+    const [products, setProducts] = useState ([])
+    
+    useEffect (()=> {
+        (async () => {
+
+            const obtenerProductos = () => {
+                return new Promise ((resolve, reject) => {
+                setTimeout (() => {
+                    resolve (rawProducts);
+                }, 3000);
+            });
+            } 
+
+            const response = await obtenerProductos ();
+            console.log (response);
+            setProducts(response)
+        }) ()
+
+    }, [])
+    
+    return (
+        <>
+{/*             {<div className="item-list-container">
                 <h2>{greeting}</h2>
-            </div>
+            </div>} */}
+            <ItemList products = {products}/>
+        
+        </>    
         )
 }
