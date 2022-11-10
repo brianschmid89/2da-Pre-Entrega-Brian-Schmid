@@ -1,0 +1,57 @@
+.contador{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.sumatoria{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 300px;
+  border-radius: 20px;
+  background-color:  black;
+  color: white;
+
+}
+
+.boton1{
+  border: none;
+  background-color:  black;
+  color: white;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+.boton2{
+  border: none;
+  background-color:  black;
+  color: white;
+  padding-bottom: 8px;
+  font-size: 20px;
+}
+
+.agregar{
+  border: none;
+  background-color:  black;
+  color: white;
+  padding-bottom: 5px;
+  margin: 15px;
+}
+
+.numero{
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+}
+
+.botonGrande{
+  border: none;
+  background-color:  black;
+  color: white;
+  padding-bottom: 5px;
+  margin: 15px;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../components/Root";
-import ItemDetailContainer from "../containers/ItemDetailContainer";
-import ItemListContainer from "../containers/ItemListContainer";
+import ItemDetailContainer from "../containers/ItemDetailContainer/itemDetailContainer";
+import ItemListContainer from "../containers/ItemListContainer/itemListContainer";
 
 
 const router = createBrowserRouter([
