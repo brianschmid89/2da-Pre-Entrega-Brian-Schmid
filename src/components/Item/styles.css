@@ -1,11 +1,10 @@
 .card-detail{
-    width: 100%;
-    height: 50%;
-    display: flex;
+        display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 15px;
     border: solid 2px black;
     justify-content: center;
     align-items: center;
+
 }
