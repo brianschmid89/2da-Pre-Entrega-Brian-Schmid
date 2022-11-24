@@ -1,10 +1,23 @@
-import React from 'react'
-import ItemCount from '../ItemCount/itemCount'
+import React, { useContext, useState } from 'react';
+import { Shop } from '../../contexts/Shop';
+import ItemCount from '../ItemCount/itemCount';
 
 
 const ItemDetail = ({Item}) => {
-console.log(Item)
-    const onAdd = (qty) => console.log(qty);
+
+    const {addProduct} = useContext(Shop);
+    const [quantityItemDetail, setQuantityItemDetail] = useState(0);
+
+    const confirmPurchase = (quantity) => {
+        console.log(quantity);
+        
+        addProduct({...addProduct, quantity})
+        setQuantityItemDetail(quantity);
+    };
+
+    console.log(Item)
+    
+//    const onAdd = (qty) => alert(`Agregaste ${qty} producto/s`);
     
     return (
 
@@ -17,8 +30,11 @@ console.log(Item)
                 <div className="col-md-8">
                 <div className="card-body">
                     <h5 className="card-title">{Item.title}</h5>
-                    <h4>Precio: {Item.price}</h4>
-                    <ItemCount stock = {Item.stock} onAdd ={onAdd}/>
+                    <h4>Precio:{Item.price}</h4>
+                        {quantityItemDetail ? 
+                            <button>Ir al carrito</button> 
+                        :   
+                            <ItemCount stock = {Item.stock} onAdd ={confirmPurchase}/>}
                 </div>
                 </div>
             </div>

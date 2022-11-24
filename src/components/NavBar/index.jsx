@@ -10,12 +10,12 @@ const NavBar = () => {
           <Link to ="/">Inicio</Link>
         </li>
         <li>
-        <Link to ="/">Coleccion</Link>
+          <Link to ="/">Coleccion</Link>
         </li>
         <li>
-        <Link to ="/">Contacto</Link>
+          <Link to ="/">Contacto</Link>
         </li>
-        <CartWidget/>
+          <Link to="/CartWidget"><CartWidget/></Link>
       </ul>
     );
 }
