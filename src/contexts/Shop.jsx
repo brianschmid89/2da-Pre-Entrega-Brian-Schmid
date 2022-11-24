@@ -63,10 +63,12 @@ const ShopProvider = ({ children }) => {
 
     //Cálculo del total de items del carrito
     const totalItemsCart = () => {
-        let total = 0
-        products.forEach((product) => (total += product.quantity));
-        return total 
-    } 
+        let count = 0
+        products.forEach(prod => {
+            count = count + prod.quantity
+        })
+        return count
+    }
 
     return  ( 
         <Shop.Provider
