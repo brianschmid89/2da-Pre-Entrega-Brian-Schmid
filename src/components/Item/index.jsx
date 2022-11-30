@@ -14,8 +14,11 @@ const Item = ({product}) => {
    
     return (
       <div className="card-detail" onClick={navigateDetail}>
-        <img style={{width:150}} src={product.image} alt="character"/>
-        <p key={product.id}>{product.title}, Precio: {product.price} stock: {product.stock}</p>
+        <img style={{width:150}} src={product.image} alt=""/>
+        <p key={product.id}></p>
+        <p>- {product.title} -</p>
+        <p> Precio: $ {product.price}.</p>  
+        <p> Stock Actual: {product.stock} Unidades</p>
       </div>
     )
 }

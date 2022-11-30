@@ -1,42 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/itemDetail';
-import products from '../../data/products'
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../firebase/config';
+
 
 const ItemDetailContainer = () => {
 
-    const [Item, setItem] = useState ({})
+    const {id} = useParams()
 
-    const {idProd} = useParams ();
-    
+    const [products, setProducts] = useState(null)
 
-    useEffect (() => {
-        const getProduct = () =>{
-            return new Promise((res, rej) => {
-                const product = products.find((prod) => prod.id === idProd)
-                setTimeout(() => {
-                    res(product);
-                }, 2000)
-            });
-        };
-    
-        getProduct()     
-        
-            .then((res) => {
-                setItem(res);
-            }) 
-            .catch((error) => {
-                console.log(`rej`, error)
-            }); 
-    }, [idProd]);
+    useEffect(() => {
 
+        const getProductsDetail = async () => {
+            //1ro referencia al doc
+            const docRef = doc(db, "products", id);
 
-    return (
-        
-        <div>
-            <ItemDetail Item ={Item}/>
-        </div>
-    )
-}
+            //2do generar la petición
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+                setProducts({...docSnap.data(), id: docSnap.id})
+            } else {
+                // doc.data() will be undefined in this case
+                console.log("No such document!");
+            }
+        }
+
+        getProductsDetail()
+        //hacer el fetch del detalle del producto
+    }, [id])
+
+    return (<ItemDetail product={products}/>)
+};
 
 export default ItemDetailContainer

@@ -17,7 +17,6 @@ const ItemDetail = ({Item}) => {
 
     console.log(Item)
     
-//    const onAdd = (qty) => alert(`Agregaste ${qty} producto/s`);
     
     return (
 
@@ -30,7 +29,7 @@ const ItemDetail = ({Item}) => {
                 <div className="col-md-8">
                 <div className="card-body">
                     <h5 className="card-title">{Item.title}</h5>
-                    <h4>Precio:{Item.price}</h4>
+                    <h4>Precio: ${Item.price}.</h4>
                         {quantityItemDetail ? 
                             <button>Ir al carrito</button> 
                         :   

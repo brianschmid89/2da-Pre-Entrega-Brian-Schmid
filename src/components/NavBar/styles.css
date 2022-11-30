@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@500&display=swap');
 
 ul {
     list-style-type: none;
@@ -8,7 +7,7 @@ ul {
     padding: 0;
     overflow: hidden;
     border: 1px solid #e7e7e7;
-    background-color: #bbbbbb;
+    background-color: #cdcdcd8c;
 }
   
 li {
@@ -16,17 +15,22 @@ li {
 }
   
 li a {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Tomorrow', sans-serif;
     font-size: 20px;
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     cursor: pointer ;
 }
-  
-li a:hover{
-    background-color: rgb(152, 152, 152);
+
+.logo{
+    width: 200px;       
+    margin-left: 400px;
+    margin-top: 5px;
 }
 
+.logo:hover{
+    background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+}
