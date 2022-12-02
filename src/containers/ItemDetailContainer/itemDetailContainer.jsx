@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
         //hacer el fetch del detalle del producto
     }, [id])
 
-    return (<ItemDetail product={products}/>)
+    return (<ItemDetail Item={products}/>)
 };
 
 export default ItemDetailContainer

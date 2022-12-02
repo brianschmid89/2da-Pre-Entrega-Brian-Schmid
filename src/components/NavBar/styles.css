@@ -34,3 +34,7 @@ li a {
 .logo:hover{
     background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
 }
+
+.formu {
+    color: black;
+}

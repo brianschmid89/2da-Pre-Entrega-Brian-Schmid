@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Shop } from '../../contexts/Shop';
+import { useNavigate } from "react-router-dom";
 import ItemCount from '../ItemCount/itemCount';
 
 
@@ -8,15 +9,17 @@ const ItemDetail = ({Item}) => {
     const {addProduct} = useContext(Shop);
     const [quantityItemDetail, setQuantityItemDetail] = useState(0);
 
+    const navigate = useNavigate ();
+
     const confirmPurchase = (quantity) => {
-        console.log(quantity);
-        
         addProduct({...addProduct, quantity})
         setQuantityItemDetail(quantity);
     };
 
-    console.log(Item)
-    
+
+    const handleNavigate = () => {
+        navigate('/cart')
+        }
     
     return (
 
@@ -31,7 +34,7 @@ const ItemDetail = ({Item}) => {
                     <h5 className="card-title">{Item.title}</h5>
                     <h4>Precio: ${Item.price}.</h4>
                         {quantityItemDetail ? 
-                            <button>Ir al carrito</button> 
+                            <button onClick = {handleNavigate}>Ir al carrito</button> 
                         :   
                             <ItemCount stock = {Item.stock} onAdd ={confirmPurchase}/>}
                 </div>
