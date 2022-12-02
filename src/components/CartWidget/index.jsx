@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react';
 import { Shop } from '../../contexts/Shop';
 import { Link, useNavigate } from 'react-router-dom';
+import CartIcon from '../CartIcon/cart';
 
 const CartWidget = () => {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ const CartWidget = () => {
 
        {totalItemsCart() !==0 &&
        <Link to ={'/cart'} > {totalItemsCart ()} </Link>}
+       <CartIcon/>
     </div>
   )
 }
