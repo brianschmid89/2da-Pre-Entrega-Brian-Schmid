@@ -7,15 +7,15 @@ import { db } from '../../firebase/config';
 
 const ItemDetailContainer = () => {
 
-    const {id} = useParams()
+    const {idProd} = useParams()
 
-    const [products, setProducts] = useState(null)
+    const [products, setProducts] = useState({})
 
     useEffect(() => {
 
         const getProductsDetail = async () => {
             //1ro referencia al doc
-            const docRef = doc(db, "products", id);
+            const docRef = doc(db, "productos", idProd);
 
             //2do generar la petición
             const docSnap = await getDoc(docRef);
@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
 
         getProductsDetail()
         //hacer el fetch del detalle del producto
-    }, [id])
+    }, [idProd])
 
     return (<ItemDetail Item={products}/>)
 };
