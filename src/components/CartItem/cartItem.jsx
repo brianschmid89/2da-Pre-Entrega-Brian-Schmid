@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Shop } from '../../contexts/Shop'
-import TrashCanIcon from '../TrashCanIcon'
+import TrashCanIcon from '../TrashCanIcon/trashcanicon'
 
 const CartItem = ({Item}) => {
 
