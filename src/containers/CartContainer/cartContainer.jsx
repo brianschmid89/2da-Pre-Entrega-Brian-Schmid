@@ -9,9 +9,10 @@ const CartContainer = () => {
 
     return (
         <div>
-            {products.map(product => {
-                return <CartItem item={product}/>
-            })}
+            <h2>Carrito</h2>
+            {products.map((Item)=> <CartItem key={Item.id} Item={Item}/>)}
+            <button className='btn btn-success p-3'>Confirmar compra</button>
+            
         </div>
     )
 }

@@ -17,16 +17,7 @@ export default function ItemListContainer ({greeting}) {
     
     useEffect (()=> {
         (async () => {
-
-        //     const obtenerProductos = () => {
-        //         return new Promise ((resolve, reject) => {
-        //         setTimeout (() => {
-        //             resolve (rawProducts);
-        //         }, 2000);
-        //     });
-        // } 
-
-            // ARMAMOS LA QUERY
+            
         let q;
 
         if (categoryId) {

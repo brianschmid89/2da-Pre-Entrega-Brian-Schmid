@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Shop } from '../../contexts/Shop';
 import { useNavigate } from "react-router-dom";
 import ItemCount from '../ItemCount/itemCount';
+import "./styles.css";
 
 
 const ItemDetail = ({Item}) => {
@@ -12,7 +13,7 @@ const ItemDetail = ({Item}) => {
     const navigate = useNavigate ();
 
     const confirmPurchase = (quantity) => {
-        addProduct({...addProduct, quantity})
+        addProduct({...Item, quantity})
         setQuantityItemDetail(quantity);
     };
 
@@ -34,7 +35,7 @@ const ItemDetail = ({Item}) => {
                     <h5 className="card-title">{Item.title}</h5>
                     <h4>Precio: ${Item.price}.</h4>
                         {quantityItemDetail ? 
-                            <button onClick = {handleNavigate}>Ir al carrito</button> 
+                            <button className='carrito' onClick = {handleNavigate}>Ir al carrito</button> 
                         :   
                             <ItemCount stock = {Item.stock} onAdd ={confirmPurchase}/>}
                 </div>

@@ -19,7 +19,7 @@ const CartItem = ({Item}) => {
       gap: 40,
       alignItems: 'center'
     }}>
-        <img src ={Item.image} width={150} alt='cart-item'/>
+        <img src ={Item.image} width={300} alt='cart-item'/>
         <h1>{Item.name}</h1>
         <p>{Item.quantity}</p>
         <div style={{width: 30}} onClick={handleRemove}>
@@ -30,17 +30,3 @@ const CartItem = ({Item}) => {
 }
 
 export default CartItem
-
-
-/* import React from 'react'
-
-const CartItem = ({Item}) => {
-  return (
-    <div>
-        <img src ={Item.image} width={150} alt='cart-item'/>
-        <h1>{Item.name}</h1>
-    </div>
-  )
-}
-
-export default CartItem */
