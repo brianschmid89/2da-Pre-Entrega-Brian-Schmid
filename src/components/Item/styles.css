@@ -3,9 +3,21 @@
     flex-direction: column;
     gap: 10px;
     padding: 15px;
-    border: solid 2px black;
+    border: solid 2px rgb(143, 143, 143);
+    box-shadow: 4px 8px 8px rgb(85, 85, 85);
     border-radius: 25px;
     justify-content: center;
     align-items: center;
+    background-color: rgb(255, 255, 255);
+}
 
+.title {
+    background-color: rgb(195, 195, 195);
+}
+.precio {
+    background-color:  rgb(155, 155, 155);
+}
+.stock {
+    background-color: rgb(125, 125, 125);
+    color: rgb(255, 204, 0);
 }

@@ -7,13 +7,13 @@ ul {
     padding: 0;
     overflow: hidden;
     border: 1px solid #e7e7e7;
-    background-color: #cdcdcd8c;
+    background-color: #7070708c;
 }
-  
+
 li {
     float: left;
 }
-  
+
 li a {
     font-family: 'Tomorrow', sans-serif;
     font-size: 20px;
@@ -27,12 +27,8 @@ li a {
 
 .logo{
     width: 200px;       
-    margin-left: 400px;
+    margin-left: 200px;
     margin-top: 5px;
-}
-
-.logo:hover{
-    background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
 }
 
 .formu {
