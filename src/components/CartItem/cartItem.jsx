@@ -23,7 +23,8 @@ const CartItem = ({Item}) => {
         <h1>{Item.name}</h1>
         <p>{Item.quantity}</p>
         <div style={{width: 30}} onClick={handleRemove}>
-          <TrashCanIcon />
+        <button className='btn btn-success p-3'>Confirmar compra</button>
+        <TrashCanIcon />
         </div>
     </div>
   )
