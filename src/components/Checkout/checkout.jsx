@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+/* import React, { useContext, useState } from 'react';
 import { db } from '../../firebase/config';
 import { addDoc , collection } from 'firebase/firestore';
+import { Shop } from '../../contexts/Shop';
 
 
 
@@ -11,12 +12,21 @@ const Checkout = () => {
       setUser (user => ({...user, [event.target.name]: event.target.value }))
   }
 
+  const {addProduct, calculateTotal} = useContext(Shop);
+
   const putOrder = () => {
       const order = {
           buyer: user,
           //products y calculateTotal consumilos de context
-          items: products,
-          total: calculateTotal()
+          items: const {addProduct} = useContext(Shop);
+          total: const calculateTotal = () => {
+            const total = products.reduce(
+                (acc, productoActual) => 
+                    (acc += productoActual.quantity * productoActual.price * productoActual.price), 
+                0
+            );
+            return total
+        }
       }
       console.log(order)
       //const db = getFirestore()
@@ -46,4 +56,4 @@ const Checkout = () => {
       </div>
   )
 }
-export default Checkout
+export default Checkout */
