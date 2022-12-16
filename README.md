@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+SportClub - Aplicación ecommerce generada para el curso de React en Coderhouse.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En esta simulamos un store de maquinaria orientada a la musculacion y el bienestar fisico.
 
-## Available Scripts
+## Scripts ejecutables
 
-In the project directory, you can run:
+En este proyecto puedes ejecutar:
 
-### `npm start`
+### `npm start` 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta el app en entorno de Desarrollo y muestra el proyecto en el navegador
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Dependencias utilizadas
 
-### `npm test`
+- `React Router`: Linkeo de enlaces internos
+- `Firebase`: Base de datos del backend. Servicio de google.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Nota: una vez clonado el proyecto a tu carpeta, ejecuta en tu terminal "npm install" para que se te descarguen estas dependencias y el proyecto funciones correctamente, "npm install react-router-dom" para instalar los enrutadores, y "npm install firebase" para instalar los archivos necesarios de conexión con la base de datos de Google.
 
-### `npm run build`
+## Pre-requisitos
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Node.js > 16](https://nodejs.org) y npm.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estructura de carpetas
+- `src`: Es la carpeta contenedora de todo nuestro codigo dentro de la aplicacion de React y contiene todas las funcionalidades.
+    - `components`: Es la carpeta que contiene todos los componentes de nuestra aplicacion.
+    - `styles.css`: Contiene los archivos css de los componentes linkeados al punto exacto de codeo.
+- `App.js`: Componente principal donde se ejecuta la lógica madre de la aplicación.
+- `context`: Es la carpeta que contiene la lógica relacionada a los estados de la aplicación.
+- `services`: Contiene las funciones que solicitan los datos a firebase (base de datos).
+- `images`: En este caso contiene solamente el logo de la marca, posicionado en el NavBar.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Estilos
+Se utiliza la forma de nombrar archivos de estilos como "styles.css" exportandolos e importandolos en cada componente, nos crea un estilo único para cada uso, y además nos facilita el trabajo al momento de la búsqueda del mismo para realizar modificaciones. 

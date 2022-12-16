@@ -52,16 +52,13 @@ const ShopProvider = ({ children }) => {
         setProducts([]);
     }
     //Cálculo del total
-    const calculateTotal = () => {
-        const total = products.reduce(
-            (acc, productoActual) => 
-                (acc += productoActual.quantity * productoActual.price * productoActual.price), 
-            0
-        );
-        return total
-    };
+    const cartQuantity = () => {
+        return products.reduce((acc, prod) => acc += prod.quantity,0)
+    }
 
     //Cálculo del total de items del carrito
+
+    
     const totalItemsCart = () => {
         let count = 0
         products.forEach(prod => {
@@ -77,7 +74,7 @@ const ShopProvider = ({ children }) => {
                 addProduct, 
                 removeProduct, 
                 emptyCart, 
-                calculateTotal, 
+                cartQuantity, 
                 totalItemsCart,
                 }}
         >
