@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Shop } from '../../contexts/Shop'
 import TrashCanIcon from '../TrashCanIcon/trashcanicon'
+import { Link } from 'react-router-dom';
 
 const CartItem = ({Item}) => {
 
@@ -23,7 +24,7 @@ const CartItem = ({Item}) => {
         <h1>{Item.name}</h1>
         <p>{Item.quantity}</p>
         <div style={{width: 30}} onClick={handleRemove}>
-        <button className='btn btn-success p-3'>Confirmar compra</button>
+        <Link to={'/checkout'} className='btn btn-success p-3'>Confirmar compra</Link>
         <TrashCanIcon />
         </div>
     </div>
