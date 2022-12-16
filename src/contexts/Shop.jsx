@@ -39,7 +39,7 @@ const ShopProvider = ({ children }) => {
         return products.some(product => product.id === id);
     }
 
-    //Eliminar un producto
+        //Eliminar un producto
     const removeProduct = (id) => {
         const productosCart = products.filter(
             (productsInCart) => productsInCart.id !== id
@@ -54,6 +54,14 @@ const ShopProvider = ({ children }) => {
     //Cálculo del total
     const cartQuantity = () => {
         return products.reduce((acc, prod) => acc += prod.quantity,0)
+    }
+
+    const totalPrice = () => {
+        let cant = 0
+        products.forEach(prod => {
+            cant = cant + (prod.quantity*prod.price)
+        })
+        return cant
     }
 
     //Cálculo del total de items del carrito
@@ -74,7 +82,8 @@ const ShopProvider = ({ children }) => {
                 addProduct, 
                 removeProduct, 
                 emptyCart, 
-                cartQuantity, 
+                cartQuantity,
+                totalPrice, 
                 totalItemsCart,
                 }}
         >
