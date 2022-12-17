@@ -17,14 +17,14 @@ const Checkout = () => {
   const putOrder = () => {
       const order = {
           buyer: user,
-          //products y calculateTotal consumilos de context
           items: products,
           total: totalPrice()
       }
           console.log(order)
-      //const db = getFirestore()
+      
+          //const db = getFirestore()
 // no sé como llamaste a la colección en firebase, yo le puse orders. Si le pusiste otro nombre, reemplazalo
-      const ordersCollection = collection(db, 'productos')
+      const ordersCollection = collection(db, 'orders')
       addDoc( ordersCollection, order ).then( ({id}) => {
       console.log( id );
           alert(`Te hemos enviado un mail a ${user.email} con tu orden de compra ID: ${id}`)
