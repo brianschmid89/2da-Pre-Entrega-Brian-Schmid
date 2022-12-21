@@ -1,4 +1,4 @@
-SportClub - Aplicación ecommerce generada para el curso de React en Coderhouse.
+## SportClub - Aplicación ecommerce generada para el curso de React en Coderhouse.
 
 En esta App, simulamos un store de maquinaria orientada a la musculacion y el bienestar fisico.
 
