@@ -8,7 +8,7 @@ const Root = () => {
     <>
         <NavBar/>
         <Outlet/>
-        <h2>_______________________________________Footer en construccion</h2>
+        <h2>_______________________________________Footer en construccion!</h2>
     </>
   )
 }
