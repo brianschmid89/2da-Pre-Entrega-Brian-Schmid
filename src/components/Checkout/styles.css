@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Poppins:wght@300&family=Tomorrow:wght@300;500&display=swap');
+
+h1{
+    font-family: 'Cinzel', serif;
+    color: red
+}
+
+h2{
+    font-family: 'Cinzel', serif;
+    color: rgb(63, 0, 0)
+}
+

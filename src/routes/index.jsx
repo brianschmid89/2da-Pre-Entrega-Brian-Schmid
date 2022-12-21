@@ -5,6 +5,8 @@ import ItemDetailContainer from "../containers/ItemDetailContainer/itemDetailCon
 import ItemListContainer from "../containers/ItemListContainer/itemListContainer";
 import CartContainer from "../containers/CartContainer/cartContainer";
 import Checkout from "../components/Checkout/checkout";
+import CartWidget from "../components/CartWidget";
+
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/cart",
                 element: <CartContainer/>,
+            },
+            {
+                path: "/CartWidget",
+                element: <CartWidget />
             },
             {
                 path: "/checkout",
